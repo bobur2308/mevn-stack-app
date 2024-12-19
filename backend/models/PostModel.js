@@ -10,17 +10,16 @@ const PostSchema = new Schema({
     required: true,
   },
   image: {
-    type: String, // URL or file path for the image
-    default: null, // Optional default value if no image is provided
+    type: String, 
+    default: null, 
   },
   userId: {
-    type: Schema.Types.ObjectId, // Reference to the User model
-    ref: 'User', // Name of the related model
-    required: true, // Make this field mandatory
+    type: Schema.Types.ObjectId, 
+    ref: 'User',
+    required: true, 
   },
 }, { timestamps: true });
 
-// Correct way to define the model
 const PostModel = model('Post', PostSchema);
 
 module.exports = PostModel;
