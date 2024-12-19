@@ -18,9 +18,9 @@ const UserSchema = new Schema({
     type: String,
     default: null,
   },
-});
+},{timestamps:true});
 
 // Correct way to define the model
-const UserModel = model('User', UserSchema);
+const UserModel = model('User-Model', UserSchema);
 
 module.exports = UserModel;
