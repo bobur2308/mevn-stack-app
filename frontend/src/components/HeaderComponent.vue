@@ -14,15 +14,16 @@ const goHome = () => {
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <!-- Replace button with an image for logo -->
-        <img
-          src="https://anorbank.uz/upload/resize_cache/iblock/965/150_150_1/cnq3bo9kmgi8gpsy0ayx99anuutul16p.PNG" 
-          alt="Logo"
-          class="navbar-brand"
-          style="cursor: pointer;"
-          width="50"
-          height="50"
-          @click="goHome"
-        />
+        <router-link to="/">
+          <img
+            src="https://anorbank.uz/upload/resize_cache/iblock/965/150_150_1/cnq3bo9kmgi8gpsy0ayx99anuutul16p.PNG" 
+            alt="Logo"
+            class="navbar-brand"
+            style="cursor: pointer;"
+            width="50"
+            height="50"
+          />
+        </router-link>
 
         <button
           class="navbar-toggler"
@@ -49,6 +50,7 @@ const goHome = () => {
             <router-link class="btn btn-primary mx-1" to="/login">Login</router-link>
             <router-link class="btn btn-secondary mx-1" to="/register">Register</router-link>
             <router-link class="btn btn-outline-dark mx-1" to="/profile">Profile</router-link>
+            <router-link class="btn btn-outline-dark mx-1" to="/add-post">Create Post</router-link>
           </div>
         </div>
       </div>
