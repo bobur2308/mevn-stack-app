@@ -20,6 +20,6 @@ const PostSchema = new Schema({
   },
 }, { timestamps: true });
 
-const PostModel = model('Post', PostSchema);
+const PostModel = model('Post-Model', PostSchema);
 
 module.exports = PostModel;
