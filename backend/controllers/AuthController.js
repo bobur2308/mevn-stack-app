@@ -1,5 +1,4 @@
 const HandleError = require("../middlewares/ErrorHandler");
-const TokenModel = require("../models/TokenModel");
 const UserModel = require("../models/UserModel");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -74,7 +73,7 @@ class AuthController {
         sameSite: 'strict', // Adjust as needed
         maxAge: 7 * 24 * 60 * 60 * 1000,
       });
-
+      req.user = { id: user._id, email: user.email };
       res.status(200).json({
         message: "Successfully logged in!",
         accessToken, // Send access token in the response body
