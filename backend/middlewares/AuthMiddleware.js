@@ -14,7 +14,7 @@ async function authenticate(req, res, next) {
     // console.log('Decoded token:', decoded);  // Log decoded token for debugging
 
     req.user = decoded;
-    console.log('User ->', token);
+    // console.log('User ->', token);
     next();
   } catch (error) {
     console.error('JWT verification error:', error.message); // Log detailed error
